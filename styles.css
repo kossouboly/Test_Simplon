@@ -10,7 +10,7 @@
 
 /* Styles généraux */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: white;
@@ -27,7 +27,7 @@ body {
 }
 
 section {
-  height: 500px;
+  height: 600px;
 }
 
 /* debut nav  */
@@ -35,12 +35,14 @@ section {
 nav {
   height: 70px;
   width: 100%;
-  border-bottom: 0.5px solid blue;
+  border-bottom: 0.5px solid green;
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-  box-shadow: 0 0 10px 0 blue;
+  box-shadow: 0 0 10px 0 green;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
 }
 
 .logo-nav {
@@ -89,7 +91,13 @@ nav a:hover::after {
   max-width: 960px;
   margin: 50px auto;
   font-size: 24px;
+  z-index: 1;
+  padding-top: 3rem;
 }
+
+/* .titre {
+  margin-top: 50px;
+} */
 
 /* fin section introduction  */
 
@@ -100,9 +108,10 @@ h2 {
   margin-bottom: 20px;
   font-size: 50px;
   color: orange;
+  font-family: 'Roboto', sans-serif;
 }
 
-.section-fonctionnment {
+.section-fonctionnement {
   display: flex;
 
   width: 100%;
@@ -111,6 +120,7 @@ h2 {
   position: relative;
   align-items: center;
   justify-content: center;
+  gap: 5px;
 }
 
 .fonctionnement-gauche {
@@ -125,14 +135,72 @@ h2 {
   margin-left: 750px;
   word-wrap: no-wrap;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
 }
 
 /* fin section fonctionnement */
 
 /*  debut section composants */
 
-/*  fin  section composants */
+.section-composants h2 {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 20px 5px;
+}
+
+.section-composants {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  gap: 70px;
+}
+
+.carte-composants {
+  text-align: center;
+  height: auto;
+  width: 280px;
+  box-shadow: 0 10px 30px white;
+  border-radius: 10px;
+}
+.img-composant {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.carte-composants p {
+  text-align: center;
+
+  padding: 0 5px 15px;
+  font-size: 16px;
+  color: white;
+}
+
+.section-schemas {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 50px;
+  font-size: 20px;
+  flex-wrap: nowrap;
+}
+
+.im-schemas {
+  left: 50px;
+  position: absolute;
+}
+.text {
+  position: absolute;
+  left: 800px;
+}
+
+/*  fin section composants */
 
 footer {
   padding: 20px 0;

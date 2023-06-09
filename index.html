@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <title></title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -18,12 +24,14 @@
         </ul>
       </nav>
 
-      <h2>Introduction</h2>
-
       <section id="section-intro">
+          
         <div class="section-intro">
+
+          <h2 class="titre">Introduction</h2>
+         
           <p class="text-intro">
-            Bienvenue chers bidouillers sur notre site dédié à la création d'un
+            Bienvenue chers bidouilleurs sur notre site dédié à la création d'un
             équipement électronique réagissant à l'humidité dans l'air ! Si vous
             êtes passionné par l'électronique et curieux de découvrir comment
             transformer une simple idée en réalité, vous êtes au bon endroit.
@@ -47,7 +55,7 @@
 
         <div class="fonctionnement-droit">
           <p>
-            la mise en oeuvre d'équipement électronique réagissant à l'humidité
+            La mise en oeuvre d'équipement électronique réagissant à l'humidité
             necessite un capteur d'humidité ou d'humidité relative. Ces capteurs
             mesurent le niveau d'humidité dans l'air et génèrent un signal
             électrique en fonction de cette mesure. Voici comment cela
@@ -66,34 +74,96 @@
             ventilateur pour réduire l'humidité ou déclencher une alarme en cas
             de niveaux d'humidité anormaux. Alimentation : L'équipement
             électronique nécessitera une source d'alimentation appropriée, telle
-            qu'une pile ou une alimentation électrique. Il est important de
-            noter que la mise en œuvre spécifique de cet équipement peut varier
-            en fonction des besoins et des applications spécifiques. Par
-            exemple, vous pouvez choisir d'ajouter des fonctionnalités
-            supplémentaires telles qu'un affichage pour afficher la lecture
-            d'humidité en temps réel ou une connectivité sans fil pour
-            transmettre les données à d'autres appareils.
+            qu'une pile ou une alimentation électrique. 
           </p>
         </div>
       </section>
 
       <h2>Composants</h2>
 
-      <section id="section-composants">
-        <div class="section-composants">
+      <section class="section-composants" id="section-composants">
+        <div class="carte-composants">
+          <div class="image-composant">
+            <img
+              class="img-composant"
+              src="ressources/images/resistors.jpg"
+              alt="resistance electrique"
+            />
+          </div>
+          <h2>Resistance electrique</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem
-            consequuntur atque laborum nam doloremque?
+            Une résistance de 4.7K ohms – code couleur jaune / violet / rouge,
           </p>
+        </div>
+        <div class="carte-composants">
+          <div class="image-composant">
+            <img
+              class="img-composant"
+              src="ressources/images/capteur.jpg"
+              alt="capteur DHT11"
+            />
+          </div>
+          <h2>capteur d'humidité DHT11</h2>
+          <p>
+            Un capteur DHT11 capable de mesurer des températures de -40 à +125°C
+            avec une précision de +/- 0.5°C et des taux d'humidité relative de 0
+            à 100% avec une précision de +/- 2% (+/- 5% aux extrêmes, à 10% et
+            90%)
+          </p>
+        </div>
+        <div class="carte-composants">
+          <div class="image-composant">
+            <img
+              class="img-composant"
+              src="ressources/images/arduino.jpg"
+              alt="microcontrôleur"
+            />
+          </div>
+          <h2>Carte Arduino</h2>
+          <p>Une carte Arduino UNO (et son câble USB),</p>
+        </div>
+        <div class="carte-composants">
+          <div class="image-composant">
+            <img
+              class="img-composant"
+              src="ressources/images/condo.jpg"
+              alt="condensateur electrique"
+            />
+          </div>
+          <h2>Condensateur Electrique</h2>
+          <p>Un condensateur de 100nF,</p>
         </div>
       </section>
 
       <h2>Schémas</h2>
 
-      <section id="section-schemas">
-        <div class="section-schemas">
-          <p>Contenu de votre section sur les schémas...</p>
-        </div>
+      <section class="section-schemas" id="section-schemas">
+        
+          <div class="im-schemas">
+            <img src="ressources/images/schema.png" alt="" />
+          </div>
+          <div class="text">
+            <!-- <h2>comment ca marche ?</h2> -->
+            <p>
+              Pour commencer notre montage, nous allons câbler les deux broches
+              d'alimentation du capteur (broche n°1 et broche n°4)
+              respectivement aux broches 5V et GND de la carte Arduino. Dans la
+              foulée, on câblera le condensateur de 100nF entre les broches n°1
+              et n°4 du capteur, en parallèle des broches d'alimentation. Les
+              condensateurs de 100nF ne sont pas polarisés, ils peuvent donc
+              être câblés dans n'importe quel sens.
+              <p>On achève ensuite le circuit
+                en reliant la résistance de 4.7K ohms d'un côté à la broche n°1 du
+                capteur (+5v) et de l'autre à la broche n°2 du capteur (sortie du
+                signal). Pour finir, on câble la broche n°2 du capteur à la broche
+                D5 de la carte Arduino avec un fil.
+
+                <Span> <b>NB.</b> </Span>Dans le cas d'une utilisation avec une carte Arduino 3.3 volts, il faudra relier l'alimentation du capteur à la broche 5V de la carte Arduino et la résistance de tirage à la broche 3.3 volts.
+
+                Si vous utilisez une carte Arduino 3.3 volts, ne câblez pas la résistance de tirage au 5 volts, sinon vous allez détruire votre carte !
+              </p></p> 
+          </div>
+        
       </section>
 
       <footer>
