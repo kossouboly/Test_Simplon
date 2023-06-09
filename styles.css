@@ -41,8 +41,6 @@ nav {
   margin-bottom: 50px;
   box-shadow: 0 0 10px 0 green;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
 }
 
 .logo-nav {
